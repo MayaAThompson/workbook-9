@@ -1,6 +1,6 @@
-package com.pluralsight.NorthwindTradersSpringBoot;
+package com.pluralsight.NorthwindTradersSpringBoot.daos;
 
-import org.apache.commons.dbcp2.BasicDataSource;
+import com.pluralsight.NorthwindTradersSpringBoot.dtos.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

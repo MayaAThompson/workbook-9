@@ -1,5 +1,6 @@
-package com.pluralsight.NorthwindTradersSpringBoot;
+package com.pluralsight.NorthwindTradersSpringBoot.daos;
 
+import com.pluralsight.NorthwindTradersSpringBoot.dtos.Product;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

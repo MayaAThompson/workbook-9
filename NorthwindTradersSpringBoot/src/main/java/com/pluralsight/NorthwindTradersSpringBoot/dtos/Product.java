@@ -1,4 +1,4 @@
-package com.pluralsight.NorthwindTradersSpringBoot;
+package com.pluralsight.NorthwindTradersSpringBoot.dtos;
 
 import org.springframework.stereotype.Component;
 
