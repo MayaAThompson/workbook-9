@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+//@Component
 public class SimpleProductDao implements ProductDao{
 
     private List<Product> products;
@@ -40,8 +40,11 @@ public class SimpleProductDao implements ProductDao{
     }
 
     @Override
-    public boolean deleteProduct(Product product) {
-        return this.products.remove(product);
+    public int deleteProduct(Product product) {
+        if (this.products.remove(product))
+            return 1;
+        else
+            return 0;
     }
 
     @Override

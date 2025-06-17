@@ -13,7 +13,7 @@ public interface ProductDao {
 
     List<Product> searchProduct(String search);
 
-    boolean deleteProduct(Product product);
+    int deleteProduct(Product product);
 
     boolean editProduct(Product product);
 

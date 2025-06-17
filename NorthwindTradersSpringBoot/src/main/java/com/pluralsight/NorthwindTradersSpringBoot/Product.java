@@ -2,6 +2,11 @@ package com.pluralsight.NorthwindTradersSpringBoot;
 
 import org.springframework.stereotype.Component;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class Product {
 
@@ -50,5 +55,27 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public static List<Product> parseProductsFromResultSet(ResultSet results) throws SQLException {
+        List<Product> matches = new ArrayList<>();
+        while (results.next()) {
+            int productId = results.getInt("ProductID");
+            String productName = results.getString("ProductName");
+            String category = results.getString("CategoryName");
+            double unitPrice = results.getDouble("UnitPrice");
+
+            Product product = new Product(productId, productName, category, unitPrice);
+            matches.add(product);
+        }
+        return matches;
+    }
+
+    @Override
+    public String toString() {
+        return "\nProduct ID: " + this.productId +
+                "\nProduct Name: " + this.name +
+                "\nCategory: " + this.category +
+                "\nPrice: $" + this.price;
     }
 }
