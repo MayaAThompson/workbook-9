@@ -16,4 +16,6 @@ public interface ProductDao {
     boolean deleteProduct(Product product);
 
     boolean editProduct(Product product);
+
+    void printProducts(List<Product> products);
 }

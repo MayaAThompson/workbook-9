@@ -48,4 +48,10 @@ public class SimpleProductDao implements ProductDao{
     public boolean editProduct(Product product) {
         return false;
     }
+
+    public void printProducts(List<Product> products) {
+        for (Product product : products) {
+            System.out.println(product);
+        }
+    }
 }
