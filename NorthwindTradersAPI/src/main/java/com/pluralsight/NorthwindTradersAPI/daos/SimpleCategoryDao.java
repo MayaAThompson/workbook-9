@@ -1,7 +1,6 @@
 package com.pluralsight.NorthwindTradersAPI.daos;
 
 import com.pluralsight.NorthwindTradersAPI.models.Category;
-import com.pluralsight.NorthwindTradersAPI.models.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -9,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class SimpleCategoryDao {
+public class SimpleCategoryDao implements CategoryDao {
 
     private List<Category> categories;
 
